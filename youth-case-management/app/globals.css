@@ -19,3 +19,24 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Blinking cursor effect for password field */
+.blinker {
+  border: 2px solid #4CAF50;  /* Green border to highlight the input */
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  position: relative;
+}
+
+/* Blinking effect */
+.blinker:focus {
+  animation: blink-caret 0.8s step-end infinite;
+  outline: none; /* Remove default focus outline */
+}
+
+/* Keyframes for blinking */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
